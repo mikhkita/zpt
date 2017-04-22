@@ -47,7 +47,7 @@ body {
 body {
 	min-width: 1024px;
 	text-align: center;
-	font-family: 'Roboto-Regular';
+	font-family: 'Roboto-Light';
 	overflow-x: hidden;
 	-webkit-text-size-adjust: none;
 	color: #383838;
@@ -132,6 +132,7 @@ input:-moz-placeholder {
 	color: #434343;
 }
 .b-btn{
+	margin-top: 20px;
 	font-family: "PTSans-Bold";
 	padding: 18px 35px;
 	letter-spacing: 1px;
@@ -161,7 +162,6 @@ h1{
 	font-family: "PTSans-Bold";
 	line-height: 55px;
 	color: #383838;
-	/*padding-top: 65px;*/
 	margin-bottom: 35px;
 }
 [class^="icon-"]:before, [class*=" icon-"]:before {
@@ -187,7 +187,67 @@ h1{
 	.icon-arrow-right:before{
 		content: "\e900";
 	}
+.b-text{
 
+}
+	.b-text h2,
+	.b-text h3,
+	.b-text h4,
+	.b-text ul,
+	.b-text p{
+		max-width: 80%;
+	}
+	.b-text h2{
+		font-size: 40px;
+		font-family: "PTSans-Bold";
+		line-height: 55px;
+		color: #383838;
+		margin-bottom: 20px;
+	}
+	.b-text h3{
+		font-size: 30px;
+	    line-height: 40px;
+	    color: #383838;
+	    font-family: "PTSans-Bold";
+	    margin-bottom: 15px;
+	}
+	.b-text h4{
+		color: #383838;
+	    font-size: 20px;
+	    font-family: "PTSans-Bold";
+	    margin-bottom: 10px;
+	}
+	.b-text a{
+
+	}
+		.b-text a:hover{
+
+		}
+	.b-text b{
+		font-family: "PTSans-Bold";
+		font-weight: normal;
+	}
+	.b-text p{
+		margin-bottom: 25px;
+	}
+	.b-text ul{
+
+	}
+		.b-text ul li{
+
+		}
+	.b-text table{
+
+	}
+		.b-text table tr{
+
+		}
+		.b-text table th{
+			font-weight: normal;
+		}
+		.b-text table td{
+
+		}
 .b-nav{
 	width: 25%;
 	background-color: #292929;
@@ -304,7 +364,7 @@ h1{
 						font-family: "Roboto-Light";
 						font-size: 18px;
 						line-height: 28px;
-						margin-bottom: 25px;
+						margin-bottom: 5px;
 					}
 					.b-product-slide .b-btn{
 
@@ -338,12 +398,12 @@ h1{
 							margin-top: -7px;
 							width: 14px;
 							height: 14px;
-							background-color: #383838;
+							background-color: #FFF;
 							opacity: 0.2;
 							border-radius: 100px;
 						}
-						.b-main-slider ul.slick-dots li button:before{
-							background-color: #FFF;
+						.b-dark-dots ul.slick-dots li button:before{
+							background-color: #383838;
 						}
 						ul.slick-dots li button:hover:before{
 							opacity: 0.5;
