@@ -187,6 +187,45 @@ h1{
 	.icon-arrow-right:before{
 		content: "\e900";
 	}
+.b-cols{
+	display: table;
+	max-width: 100%;
+	width: 100%;
+}
+	.b-text .b-cols p{
+		max-width: 100%;
+	}
+	.b-cols .b-col{
+		display: table-cell;
+	}
+	.b-4-cols .b-col{
+		padding-right: 20px;
+		width: 25%;
+		margin-right: 0%;
+	}
+	.b-3-cols .b-col{
+		padding-right: 20px;
+		width: 33%;
+		margin-right: 0%;
+	}
+	.b-cols .b-col img{
+		max-width: 100%;
+		width: 100%;
+	}
+	.b-2-cols .b-col{
+		padding-right: 20px;
+		width: 50%;
+		margin-right: 0%;
+	}
+	.b-2-cols .b-col:nth-child(2n){
+		margin-right: 0;
+	}
+	.b-3-cols .b-col:nth-child(3n){
+		margin-right: 0;
+	}
+	.b-4-cols .b-col:nth-child(4n){
+		margin-right: 0;
+	}
 .b-text{
 
 }
@@ -198,6 +237,7 @@ h1{
 		max-width: 80%;
 	}
 	.b-text h2{
+		margin-top: 25px;
 		font-size: 40px;
 		font-family: "PTSans-Bold";
 		line-height: 55px;
@@ -205,6 +245,7 @@ h1{
 		margin-bottom: 20px;
 	}
 	.b-text h3{
+		margin-top: 25px;
 		font-size: 30px;
 	    line-height: 40px;
 	    color: #383838;
@@ -212,6 +253,7 @@ h1{
 	    margin-bottom: 15px;
 	}
 	.b-text h4{
+		margin-top: 25px;
 		color: #383838;
 	    font-size: 20px;
 	    font-family: "PTSans-Bold";
@@ -228,26 +270,73 @@ h1{
 		font-weight: normal;
 	}
 	.b-text p{
-		margin-bottom: 25px;
+		/*margin-bottom: 25px;*/
 	}
 	.b-text ul{
-
+		/*margin-bottom: 10px;*/
 	}
 		.b-text ul li{
-
+			line-height: 28px;
+			padding-left: 25px;
+			position: relative;
 		}
-	.b-text table{
-
+			.b-text ul li:before{
+				position: absolute;
+				content: "s";
+				font-size: 0px;
+				width: 6px;
+				height: 6px;
+				left: 0px;
+				top: 10px;
+				background-color: #2a2a2a;
+				border-radius: 10px;
+			}
+	.b-text img{
+		margin-bottom: 30px;
+		max-width: 100%;
+		height: auto !important;
 	}
-		.b-text table tr{
-
-		}
+	.b-text .b-col img{
+		margin-bottom: 15px;
+	}
+	.b-text p + img,
+	.b-text p + div{
+		margin-top: 35px;
+	}
+	.b-text table{
+		box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+		background-color: #f9f9f9;
+		width: 100%;
+		margin-bottom: 35px;
+	}
 		.b-text table th{
+			border: none;
+			color: #FFF;
 			font-weight: normal;
+			font-family: "Roboto-Regular";
+			text-align: center;
+			background-color: #a7a7a7;
+			padding: 11px 20px 9px;
+			border-right: 1px solid #afafaf;
+			border-bottom: 1px solid #afafaf;
+		}
+			.b-text table th p{
+				color: #FFF;
+				max-width: 100%;
+			}
+		.b-text table th:nth-child(2n){
+			background-color: #a0a0a0;
 		}
 		.b-text table td{
-
+			border-bottom: 1px solid #ececec;
+			vertical-align: top;
+			padding: 11px 20px 9px;
+			border-right: 1px solid #ececec;
 		}
+			.b-text table td p{
+				max-width: 100%;
+				margin-bottom: 0px;
+			}
 .b-nav{
 	width: 25%;
 	background-color: #292929;
