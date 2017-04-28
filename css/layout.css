@@ -132,7 +132,7 @@ input:-moz-placeholder {
 	color: #434343;
 }
 .b-btn{
-	margin-top: 20px;
+	margin-top: 35px;
 	font-family: "PTSans-Bold";
 	padding: 18px 35px;
 	letter-spacing: 1px;
@@ -357,8 +357,9 @@ h1{
 			background-position: 50% 50%;
 			background-repeat: no-repeat;
 			background-image: url('../i/logo.png');
+			background-size: 164px;
 			width: 164px;
-			height: 146px;
+			height: 148px;
 			display: inline-block;
 		}
 	.b-menu{
@@ -453,7 +454,7 @@ h1{
 						font-family: "Roboto-Light";
 						font-size: 18px;
 						line-height: 28px;
-						margin-bottom: 5px;
+						margin-bottom: 0px;
 					}
 					.b-product-slide .b-btn{
 
@@ -608,6 +609,9 @@ h1{
 	.b-redder{
 		background-image: url('../i/logo-redder@2x.png');
 		background-size: 127px;
+	}
+	.b-logo{
+		background-image: url('../i/logo@2x.png');
 	}
 }	
 @media screen and (max-width: 1200px){
