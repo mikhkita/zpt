@@ -54,11 +54,16 @@ $(document).ready(function(){
 		$(this).validate({
 			rules: {
 				email: 'email',
-				phone: 'customPhone'
+				phone: 'customPhone',
+				"PHONE": 'customPhone'
 			}
 		});
 		if( $(this).find("input[name=phone]").length ){
 			$(this).find("input[name=phone]").mask(tePhone,{placeholder:" "});
+		}
+
+		if( $(this).find("input[name=PHONE]").length ){
+			$(this).find("input[name=PHONE]").mask(tePhone,{placeholder:" "});
 		}
 	});
 

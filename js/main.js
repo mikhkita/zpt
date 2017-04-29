@@ -1,4 +1,10 @@
 $(document).ready(function(){	
+    var isDesktop = false,
+        isTablet = false,
+        isMobile = false,
+        myWidth = 0;
+        myHeight = 0;
+
     function resize(){
        if( typeof( window.innerWidth ) == 'number' ) {
             myWidth = window.innerWidth;
@@ -11,9 +17,73 @@ $(document).ready(function(){
             myWidth = document.body.clientWidth;
             myHeight = document.body.clientHeight;
         }
+        isDesktop = isTablet = isMobile = false;
+
+        if( myWidth > 1240 ){
+            isDesktop = true;
+        }else if( myWidth > 768 ){
+            isTablet = true;
+        }else{
+            isMobile = true;
+        }
+
+        resizeGrid();
     }
     $(window).resize(resize);
     resize();
+    var iter = 0,
+        interval = setInterval(function(){
+            resize();
+            iter++;
+            if( iter >= 20 ) clearInterval(interval);
+        },100);
+
+    function resizeGrid(){
+        $(".b-product-grid .b-product-slide").css({
+            "height" : "auto"
+        });
+        if( $(".b-product-grid .b-product-slide").length && !isMobile ){
+            var maxHeight = 0,
+                i = 0,
+                elems = [],
+                count = 2;
+            $(".b-product-grid .b-product-slide").each(function(){
+                console.log($(this).height());
+                if( $(this).index() % count == 0 ){
+                    setHeight(maxHeight, elems);
+                    elems = [];
+                    maxHeight = 0;
+                }
+                if( maxHeight < $(this).height() )
+                    maxHeight = $(this).height();
+
+                elems.push($(this));
+            });
+            setHeight(maxHeight, elems);
+        }
+    }
+
+    if( $(".b-job-detail").length )
+        $(".b-job-detail").animate({height: "hide"}, 0);
+
+    function setHeight(height, elems){
+        for( var i in elems )
+            elems[i].css("height", height);
+    }
+
+    $(".b-btn-more").click(function(){
+        $(this).parents(".b-job").find(".b-job-detail").animate({height: "show"}, 400);
+        $(this).parents(".b-job").find(".b-btn-hide").css("display", "inline-block");
+        $(this).css("display", "none");
+        return false;
+    });
+
+    $(".b-btn-hide").click(function(){
+        $(this).parents(".b-job").find(".b-job-detail").animate({height: "hide"}, 400);
+        $(this).parents(".b-job").find(".b-btn-more").css("display", "inline-block");
+        $(this).css("display", "none");
+        return false;
+    });
 
     $.fn.placeholder = function() {
         if(typeof document.createElement("input").placeholder == 'undefined') {
@@ -47,7 +117,7 @@ $(document).ready(function(){
         autoplaySpeed: 4000
     });
 
-    $('.b-product-slider').slick({
+    $('.b-product-slick').slick({
         dots: true,
         autoplay: true,
         autoplaySpeed: 5000
