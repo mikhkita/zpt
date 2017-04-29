@@ -362,7 +362,7 @@ h1{
 			display: block;
 		}
 	.b-menu{
-		padding: 45px 50px;
+		padding: 45px 50px 0px;
 	}
 		.b-menu li{
 			text-align: right;

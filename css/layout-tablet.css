@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body {
-	min-width: 768px;
+	min-width: 750px;
 }
 
 .itsMenu{
@@ -28,64 +28,6 @@ body {
 		max-width: 100%;
 		width: 100%;
 	}
-
-/*.b-block{
-	position: relative;
-	padding: 0px 40px;
-}
-.b-padding{
-	padding-top: 45px;
-	padding-bottom: 50px;
-}
-
-.b-nav{
-	min-width: 192px;
-}
-	.b-logo-cont{
-		text-align: right;
-		padding: 20px;
-	}
-		.b-logo{
-			width: 100%;
-			min-width: 150px;
-			background-size: contain;
-		}
-	.b-menu{
-		padding: 35px 25px;
-	}
-
-.b-text{
-
-}
-	.b-text h2, 
-	.b-text h3, 
-	.b-text h4, 
-	.b-text ul, 
-	.b-text p {
-		max-width: 100%;
-		width: 100%;
-	}
-
-.b-partners-logo li a {
-    width: 100px;
-    height: 100px;
-}
-
-.b-partners h2.b-title {
-    margin-bottom: 35px;
-}
-
-.b-partners-slider .slick-button{
-	padding: 20px 0;
-}
-
-.b-text table th{
-	padding: 5px 8px 5px;
-}
-
-.b-text table td{
-	vertical-align: middle;
-}*/
 
 .slideout-menu {
   position: fixed;

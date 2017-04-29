@@ -129,7 +129,7 @@ $(document).ready(function(){
     });
 
     var slideout = new Slideout({
-        'panel': document.getElementById('panel'),
+        'panel': document.getElementById('panelSlideout'),
         'menu': document.getElementById('menu'),
         'padding': 256,
         'tolerance': 70
@@ -148,6 +148,7 @@ $(document).ready(function(){
             $('.itsMenu').removeClass("hideMenu");
         }else{
             slideout.close();
+            $('.burger-menu').removeClass("menu-on");
             $('.itsMenu').addClass("hideMenu");
         }
     });
