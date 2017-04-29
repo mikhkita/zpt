@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+body{
+	overflow: auto;
+	font-size: 24px;
+	line-height: 40px;
+}
+
+h2.b-title,
+h1{
+	font-size: 60px;
+	margin-bottom: 50px;
+	line-height: 70px;
+}
+
+.b-btn{
+	margin-top: 30px;
+	font-size: 24px;
+	border: 2px solid #383838;
+}
+
+.b-blue-btn{
+	color: #0077b7;
+	border-color: #0077b7;
+}
+
+.b-text{
+
+}
+	.b-text h2{
+		margin-top: 35px;
+		font-size: 60px;
+		margin-bottom: 35px;
+	}
+	.b-text h3{
+		margin-top: 35px;
+		font-size: 45px;
+	    margin-bottom: 30px;
+	}
+	.b-text h4{
+		margin-top: 35px;
+	    font-size: 30px;
+	    margin-bottom: 20px;
+	}
+
+	.b-text ul li{
+		line-height: 42px;
+		padding-left: 35px;
+	}
+		.b-text ul li:before{
+			position: absolute;
+			content: "s";
+			font-size: 0px;
+			width: 10px;
+			height: 10px;
+			left: 0px;
+			top: 17px;
+			background-color: #2a2a2a;
+			border-radius: 10px;
+		}
+
+	.b-text img{
+		margin-bottom: 40px;
+	}
+	.b-text .b-col img{
+		margin-bottom: 25px;
+	}
+	.b-text p + img,
+	.b-text p + div{
+		margin-top: 50px;
+	}
+	.b-text table{
+		margin-bottom: 45px;
+	}
+
+	.b-text table{
+		margin-bottom: 45px;
+	}
+		.b-text table th{
+			padding: 7px 10px 6px;
+			font-size: 18px;
+		}
+		.b-text table td{
+			padding: 11px 15px 9px;
+			font-size: 18px;
+			font-weight: 700;
+		}
+
+	.b-menu{
+		padding: 40px 35px;
+	}
+		.b-menu li{
+			margin-bottom: 30px;
+		}
+			.b-menu li a{
+				font-size: 20px;
+			}
+
+
+			.b-main-text p{
+				padding-bottom: 60px;
+				max-width: 100%;
+			}
+
+	.b-product-slider .slick-prev,
+	.b-product-slider .slick-next{
+		display: none !important;
+	}
+		.b-product-slide{
+			background-position: 30% 50%;
+		}
+					.b-product-slide h3{
+						font-size: 40px;
+						margin-bottom: 8px;
+					}
+					.b-product-slide p{
+						font-size: 24px;
+						margin-bottom: 8px;
+					}
+
+					.b-partners-slider .slick-button{
+						margin-top: -60px;
+					}
+
+					.b-partners-slider .slick-button:before{
+						font-size: 60px;
+					}
+	.b-footer{
+	}
+		.b-footer .b-block{
+			padding-bottom: 80px;
+		}
+				.b-footer h3{
+					font-size: 28px;
+					margin-bottom: 15px;
+				}
+				.b-redder{
+					background-position: 50% 50%;
+					background-repeat: no-repeat;
+					background-image: url('../i/logo-redder@2x.png');
+					background-size: contain;
+					width: 200px;
+					height: 35px;
+					font-size: 0px;
+					position: absolute;
+					right: 0px;
+					bottom: 10px;
+					cursor: pointer;
+				}
+

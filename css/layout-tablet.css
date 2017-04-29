@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+body {
+	min-width: 768px;
+}
+
+.itsMenu{
+	background-color: #383838;
+	padding: 10px 15px;
+}
+	.itsMenu h3{
+		color: #FFF;
+		margin: 0;
+	}
+
+.b-page{
+	width: 100%;
+}
+
+.b-text{
+
+}
+	.b-text h2, 
+	.b-text h3, 
+	.b-text h4, 
+	.b-text ul, 
+	.b-text p {
+		max-width: 100%;
+		width: 100%;
+	}
+
+/*.b-block{
+	position: relative;
+	padding: 0px 40px;
+}
+.b-padding{
+	padding-top: 45px;
+	padding-bottom: 50px;
+}
+
+.b-nav{
+	min-width: 192px;
+}
+	.b-logo-cont{
+		text-align: right;
+		padding: 20px;
+	}
+		.b-logo{
+			width: 100%;
+			min-width: 150px;
+			background-size: contain;
+		}
+	.b-menu{
+		padding: 35px 25px;
+	}
+
+.b-text{
+
+}
+	.b-text h2, 
+	.b-text h3, 
+	.b-text h4, 
+	.b-text ul, 
+	.b-text p {
+		max-width: 100%;
+		width: 100%;
+	}
+
+.b-partners-logo li a {
+    width: 100px;
+    height: 100px;
+}
+
+.b-partners h2.b-title {
+    margin-bottom: 35px;
+}
+
+.b-partners-slider .slick-button{
+	padding: 20px 0;
+}
+
+.b-text table th{
+	padding: 5px 8px 5px;
+}
+
+.b-text table td{
+	vertical-align: middle;
+}*/
+
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  display: none;
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-menu-right {
+  right: 0;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: #FFF; /* A background-color is required */
+  min-height: 100vh;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+
+/* the tasty burger */
+.burger-menu {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.burger-menu h3{
+	position: absolute;
+	left: 55px;
+	bottom: 3px;
+}
+.burger {
+  position: absolute;
+  background: #FFF;
+  width: 100%;
+  height: 7px;
+  top: 50%;
+  right: 0px;
+  margin-top: -5px;
+  opacity: 1;
+}
+.burger::before {
+  position: absolute;
+  background: #FFF;
+  width: 40px;
+  height: 7px;
+  top: 14px;
+  content: "";
+  display: block;
+}
+.burger::after {
+  position: absolute;
+  background: #FFF;
+  width: 40px;
+  height: 7px;
+  bottom: 14px;
+  content: "";
+  display: block;
+}
+.burger::after, .burger::before, .burger {
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+}
+.burger-menu.menu-on .burger::after{
+   transform: rotate(-45deg);
+   -webkit-transform: rotate(-45deg);
+  bottom: 0px;
+}
+.burger-menu.menu-on .burger::before{
+   transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+  top: 0px;
+}
+.burger-menu.menu-on .burger{
+ background: rgba(111,111,111,.0);
+}

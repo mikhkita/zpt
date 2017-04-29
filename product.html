@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="css/slick.css" type="text/css">
 	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
+	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 767px)" href="css/layout-mobile.css">
+	<link rel="stylesheet" media="screen and (max-width: 1024px)" href="css/layout-tablet.css">
 	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
 
 	<meta name="viewport" content="width=1000">
@@ -31,10 +33,11 @@
 	<script type="text/javascript" src="js/device.js"></script>
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/slideout.min.js"></script>
 
 </head>
 <body>
-	<div class="b-nav">
+	<div class="b-nav" id="menu">
 		<div class="b-logo-cont clearfix">
 			<a href="index.html" class="b-logo right"></a>
 		</div>
@@ -47,7 +50,13 @@
 			<li><a href="contacts.html">Контакты</a></li>
 		</ul>
 	</div>
-	<div class="b-page">
+	<div class="b-page" id="panel">
+		<div class="b b-text itsMenu hideMenu">
+			<div class="burger-menu">
+	  			<div class="burger"></div>  
+	  			<h3>Меню<h3>
+			</div>	
+		</div>
 		<div class="b b-main-slider b-dark-dots">
 			<div class="b-main-slide" style="background-image: url('i/vibro-3.jpg');"></div>
 			<div class="b-main-slide" style="background-image: url('i/vibro-2.jpg');"></div>
