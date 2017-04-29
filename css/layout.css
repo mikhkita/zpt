@@ -603,6 +603,10 @@ h1{
 					cursor: pointer;
 				}
 
+.hideMenu{
+	display: none;
+}
+
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	.b-redder{
@@ -614,6 +618,13 @@ h1{
 	.b-partners-logo li a{
 		width: 125px;
 		height: 125px;
+	}
+	.b-text table th{
+		padding: 8px 12px 8px;
+	}
+
+	.b-text table td{
+		vertical-align: middle;
 	}
 }
 @media screen and (max-height: 650px){

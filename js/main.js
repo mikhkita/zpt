@@ -58,6 +58,33 @@ $(document).ready(function(){
         nextArrow: '<button type="button" class="slick-next slick-button icon-arrow-right"></button>'
     });
 
+    var slideout = new Slideout({
+        'panel': document.getElementById('panel'),
+        'menu': document.getElementById('menu'),
+        'padding': 256,
+        'tolerance': 70
+    });
+    document.querySelector('.burger-menu').addEventListener('click', function() {
+        slideout.toggle();
+    });
+
+    $('.burger-menu').click(function () {
+        $(this).toggleClass("menu-on");
+    });
+
+    $(window).resize(function(){
+        if(window.innerWidth <= 1024)
+        {
+            $('.itsMenu').removeClass("hideMenu");
+        }else{
+            slideout.close();
+            $('.itsMenu').addClass("hideMenu");
+        }
+    });
+    $(window).resize();
+
+    
+
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {
  //        zoom: 16,
