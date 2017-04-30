@@ -125,6 +125,26 @@ h1{
 					.b-partners-slider .slick-button:before{
 						font-size: 60px;
 					}
+	.b-job-list{
+		padding-top: 45px;
+	}
+		.b-job{
+			position: relative;
+			padding-bottom: 40px;
+		}
+	.b-form{
+		padding-top: 40px;
+	}
+
+		input[type="text"],
+		input[type="email"],
+		textarea{
+			font-size: 24px;
+			margin-bottom: 40px;
+		}
+		.b-form .b-btn{
+			margin-top: 30px;
+		}
 	.b-footer{
 	}
 		.b-footer .b-block{
