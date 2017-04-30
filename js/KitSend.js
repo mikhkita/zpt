@@ -54,6 +54,7 @@ $(document).ready(function(){
 		$(this).validate({
 			rules: {
 				email: 'email',
+				"EMAIL": 'email',
 				phone: 'customPhone',
 				"PHONE": 'customPhone'
 			}
@@ -87,6 +88,7 @@ $(document).ready(function(){
 	            	locked: true 
 	         	}
 	      	},
+	      	closeTpl : '<button data-fancybox-close class="icon icon-close fancybox-close-small"></button>',
 			beforeShow: function(){
 				$(".fancybox-wrap").addClass("beforeShow");
 				$popup.find(".custom-field").remove();
@@ -171,7 +173,7 @@ $(document).ready(function(){
 					$(".b-error-link").click();
 				},
 				complete: function(){
-					$this.find(".ajax").removeAttr("onclick");
+					// $this.find(".ajax").removeAttr("onclick");
 					$this.find("input[type=text],textarea").val("");
 				}
 			});

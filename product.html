@@ -170,33 +170,24 @@
 		</div>
 	</div>
 	<div style="display:none;">
-		<a href="#b-popup-error" class="b-error-link fancy" style="display:none;"></a>
-		<div class="b-popup" id="b-popup-1">
-			<h3>Оставьте заявку</h3>
-			<h4>и наши специалисты<br>свяжутся с Вами в ближайшее время</h4>
-			<form action="kitsend.php" method="POST" id="b-form-1" data-block="#b-popup-2">
-				<div class="b-popup-form">
-					<label for="name">Введите Ваше имя</label>
-					<input type="text" id="name" name="name" required/>
-					<label for="tel">Введите Ваш номер телефона</label>
-					<input type="text" id="tel" name="phone" required/>
-					<label for="tel">Введите Ваш E-mail</label>
-					<input type="text" id="tel" name="email" required/>
-					<input type="hidden" name="subject" value="Заказ"/>
-					<input type="submit" class="ajax b-orange-butt" value="Заказать">
-					<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
-				</div>
-			</form>
+		<div id="b-map-contact-text">
+			<h4>ЗАО «Томский Приборный завод»</h4>
+			<p>Россия, 634040, г. Томск, ул. Высоцкого Владимира 28, ст 3</p>
 		</div>
+		<a href="#b-popup-error" class="b-error-link fancy" style="display:none;"></a>
 		<div class="b-thanks b-popup" id="b-popup-success">
-			<h3>Спасибо!</h3>
-			<h4>Ваша заявка успешно отправлена.<br/>Наш менеджер свяжется с Вами в течение часа.</h4>
-			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+			<div class="b-text">
+				<h2>Спасибо!</h2>
+				<p>Ваша заявка успешно отправлена.<br/>Наш менеджер свяжется с Вами в рабочее время для уточнения информации.</p>
+				<a class="b-btn b-blue-btn" onclick="$.fancybox.close(); return false;">Закрыть</a>
+			</div>
 		</div>
 		<div class="b-thanks b-popup" id="b-popup-error">
-			<h3>Ошибка отправки!</h3>
-			<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
-			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+			<div class="b-text">
+				<h2>Ошибка отправки!</h2>
+				<p>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</p>
+				<a class="b-btn b-blue-btn" onclick="$.fancybox.close(); return false;">Закрыть</a>
+			</div>
 		</div>
 	</div>
 </body>

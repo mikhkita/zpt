@@ -27,6 +27,8 @@ $(document).ready(function(){
             isMobile = true;
         }
 
+        resizePartners();
+
         resizeGrid();
     }
     $(window).resize(resize);
@@ -69,6 +71,20 @@ $(document).ready(function(){
     function setHeight(height, elems){
         for( var i in elems )
             elems[i].css("height", height);
+    }
+
+    function resizePartners(){
+        var imageWidth = $(".b-partners-slide a").eq(0).width(),
+            sliderWidth = $(".b-partners-slider").width();
+        if( $('.b-partners-slider.slick-slider') )
+            $('.b-partners-slider.slick-slider').slick("unslick");
+        
+        $('.b-partners-slider').slick({
+            rows: 2,
+            slidesPerRow: Math.floor(sliderWidth/(imageWidth*1.2)),
+            prevArrow: '<button type="button" class="slick-prev slick-button icon-arrow-left"></button>',
+            nextArrow: '<button type="button" class="slick-next slick-button icon-arrow-right"></button>'
+        });
     }
 
     $(".b-btn-more").click(function(){
@@ -123,11 +139,6 @@ $(document).ready(function(){
         autoplaySpeed: 5000
     });
 
-    $('.b-partners-slider').slick({
-        prevArrow: '<button type="button" class="slick-prev slick-button icon-arrow-left"></button>',
-        nextArrow: '<button type="button" class="slick-next slick-button icon-arrow-right"></button>'
-    });
-
     var slideout = new Slideout({
         'panel': document.getElementById('panelSlideout'),
         'menu': document.getElementById('menu'),
@@ -156,22 +167,112 @@ $(document).ready(function(){
 
     
 
-	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
- //    var myOptions = {
- //        zoom: 16,
- //        center: myPlace,
- //        mapTypeId: google.maps.MapTypeId.ROADMAP,
- //        disableDefaultUI: true,
- //        scrollwheel: false,
- //        zoomControl: true
- //    }
- //    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
+	var myPlace = new google.maps.LatLng(56.520189, 85.104639);
+    var myOptions = {
+        zoom: 15,
+        // center: new google.maps.LatLng(56.520695, 85.111495),
+        center: myPlace,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        disableDefaultUI: true,
+        scrollwheel: false,
+        zoomControl: true
+    }
+    var map = new google.maps.Map(document.getElementById("b-map"), myOptions); 
 
- //    var marker = new google.maps.Marker({
-	//     position: myPlace,
-	//     map: map,
-	//     title: "Ярмарка вакансий и стажировок"
-	// });
+    var marker = new google.maps.Marker({
+	    position: myPlace,
+        icon: {
+            url: "i/pin@2x.png", // url
+            scaledSize: new google.maps.Size(44, 66), // scaled size
+            origin: new google.maps.Point(0,0), // origin
+            anchor: new google.maps.Point(22,66) // anchor
+        },
+	    map: map,
+	    title: "ЗАО «Томский Приборный Завод»"
+	});
+
+
+    var styles = [
+    {
+        "featureType": "all",
+        "elementType": "all",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "gamma": 1
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "saturation": "-99"
+            },
+            {
+                "lightness": "38"
+            },
+            {
+                "gamma": "3.11"
+            },
+            {
+                "color": "#aaaaaa"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            { "color": "#0077b7" },
+            { "visibility": "simplified" }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#000000"
+            }
+        ]
+    }
+];
+
+        var styledMap = new google.maps.StyledMapType(styles,
+            {name: "Styled Map"});
+    map.mapTypes.set('map_style', styledMap);
+    map.setMapTypeId('map_style');
+
+    var contentString = '<div class="gmap-bubble-marker-cont"><div class="gmap-bubble-marker b-contacts gmap-bubble-marker-hide"><div class="b-three-color"></div><div class="gmap-close-button icon-close icon"></div><div class="b-text gmap-cont gmap-cont-1 b-for-contacts"></div></div></div>';
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map,marker);
+        if( $(".gmap-bubble-marker").hasClass("gmap-bubble-marker-hide") ){
+            $(".gmap-bubble-marker").removeClass("gmap-bubble-marker-hide");
+        }else{
+            $(".gmap-bubble-marker").addClass("gmap-bubble-marker-hide");
+        }
+    });
+
+    google.maps.event.addListenerOnce(map, 'idle', function(){
+        infowindow.open(map,marker);
+    });
+
+    $("body").on("click",".gmap-close-button",function(){
+        $(".gmap-bubble-marker").addClass("gmap-bubble-marker-hide");
+    });
+
+    $(window).load(function(){
+        $(".b-for-contacts").html($("#b-map-contact-text"));
+    });
 
     //  var options = {
     //     $AutoPlay: true,                                
