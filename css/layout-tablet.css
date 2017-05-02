@@ -7,6 +7,7 @@ body {
 .itsMenu{
 	background-color: #383838;
 	padding: 10px 15px;
+  box-sizing: border-box;
 }
 	.itsMenu h3{
 		color: #FFF;
