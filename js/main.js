@@ -50,7 +50,6 @@ $(document).ready(function(){
                 elems = [],
                 count = 2;
             $(".b-product-grid .b-product-slide").each(function(){
-                console.log($(this).height());
                 if( $(this).index() % count == 0 ){
                     setHeight(maxHeight, elems);
                     elems = [];
@@ -73,15 +72,19 @@ $(document).ready(function(){
             elems[i].css("height", height);
     }
 
+    $('.b-parallax').parallax({
+        speed : 0
+    });
+
     function resizePartners(){
         var imageWidth = $(".b-partners-slide a").eq(0).width(),
             sliderWidth = $(".b-partners-slider").width();
         if( $('.b-partners-slider.slick-slider') )
             $('.b-partners-slider.slick-slider').slick("unslick");
-        
+
         $('.b-partners-slider').slick({
             rows: 2,
-            slidesPerRow: Math.floor(sliderWidth/(imageWidth*1.2)),
+            slidesPerRow: Math.floor(sliderWidth/(imageWidth*1.3)),
             prevArrow: '<button type="button" class="slick-prev slick-button icon-arrow-left"></button>',
             nextArrow: '<button type="button" class="slick-next slick-button icon-arrow-right"></button>'
         });
