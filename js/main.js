@@ -145,15 +145,9 @@ $(document).ready(function(){
     var slideout = new Slideout({
         'panel': document.getElementById('panelSlideout'),
         'menu': document.getElementById('menu'),
-        'padding': 256,
-        'tolerance': 70
-    });
-    document.querySelector('.burger-menu').addEventListener('click', function() {
-        slideout.toggle();
-    });
-
-    $('.burger-menu').click(function () {
-        $(this).toggleClass("menu-on");
+        'padding': 400,
+        'tolerance': 70,
+        'touch' : false
     });
 
     $(window).resize(function(){
@@ -168,7 +162,45 @@ $(document).ready(function(){
     });
     $(window).resize();
 
-    
+    // Toggle button
+    $('.burger-menu').click(function() {
+        slideout.open();
+        $(".b-menu-overlay").show();
+        return false;
+    });
+    $('.b-menu-overlay').click(function() {
+        slideout.close();
+        $('.b-menu-overlay').hide();
+        return false;
+    });
+
+    slideout.on('open', function() {
+        $('.burger-menu').addClass("menu-on");
+        $(".b-menu-overlay").show();
+    });
+
+    slideout.on('close', function() {
+        $('.burger-menu').removeClass("menu-on");
+        setTimeout(function(){
+            $("body").unbind("touchmove");
+            $(".b-menu-overlay").hide();
+        },100);
+    });
+
+    bindCloseMenu("menu");
+    bindCloseMenu("b-menu-overlay");
+
+    function bindCloseMenu(id){
+        var swipeh = new MobiSwipe(id);
+        swipeh.direction = swipeh.HORIZONTAL;
+        swipeh.onswipeleft = function() { 
+            $("body").bind("touchmove", function(e){
+                e.preventDefault();
+                return false;
+            });
+        slideout.close(); 
+        };
+    }
 
 	var myPlace = new google.maps.LatLng(56.520189, 85.104639);
     var myOptions = {

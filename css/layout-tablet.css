@@ -6,7 +6,7 @@ body {
 
 .itsMenu{
 	background-color: #383838;
-	padding: 10px 15px;
+	padding: 15px 20px;
   box-sizing: border-box;
 }
 	.itsMenu h3{
@@ -34,7 +34,7 @@ body {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 256px;
+  width: 400px;
   min-height: 100vh;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;

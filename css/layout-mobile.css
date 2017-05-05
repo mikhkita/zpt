@@ -87,13 +87,14 @@ h1{
 		}
 
 	.b-menu{
-		padding: 40px 35px;
+		padding: 45px 40px 0px;
 	}
 		.b-menu li{
-			margin-bottom: 30px;
+			margin-bottom: 45px;
 		}
 			.b-menu li a{
-				font-size: 20px;
+				font-size: 26px;
+				padding: 20px;
 			}
 
 
