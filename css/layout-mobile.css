@@ -33,9 +33,10 @@ h1{
 		margin-bottom: 35px;
 	}
 	.b-text h3{
-		margin-top: 35px;
-		font-size: 45px;
-	    margin-bottom: 30px;
+		margin-top: 30px;
+		font-size: 58px;
+	    margin-bottom: 45px;
+	    line-height: 55px;
 	}
 	.b-text h4{
 		margin-top: 35px;
@@ -87,13 +88,13 @@ h1{
 		}
 
 	.b-menu{
-		padding: 45px 40px 0px;
+		padding: 50px 40px 0px;
 	}
 		.b-menu li{
-			margin-bottom: 45px;
+			margin-bottom: 50px;
 		}
 			.b-menu li a{
-				font-size: 26px;
+				font-size: 28px;
 				padding: 20px;
 			}
 
@@ -127,7 +128,7 @@ h1{
 						font-size: 60px;
 					}
 	.b-job-list{
-		padding-top: 45px;
+		padding-top: 30px;
 	}
 		.b-job{
 			position: relative;
@@ -140,7 +141,7 @@ h1{
 		input[type="text"],
 		input[type="email"],
 		textarea{
-			font-size: 24px;
+			font-size: 26px;
 			margin-bottom: 40px;
 		}
 		.b-form .b-btn{
@@ -169,3 +170,6 @@ h1{
 					cursor: pointer;
 				}
 
+.burger-menu h3{
+	top: 0px;
+}
