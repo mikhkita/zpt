@@ -145,7 +145,7 @@ $(document).ready(function(){
     var slideout = new Slideout({
         'panel': document.getElementById('panelSlideout'),
         'menu': document.getElementById('menu'),
-        'padding': 400,
+        'padding': 256,
         'tolerance': 70,
         'touch' : false
     });
@@ -202,6 +202,37 @@ $(document).ready(function(){
         };
     }
 
+    function footerToBottom() {
+        var browserHeight = $(window).height(),
+        footerOuterHeight = $('.b-footer').outerHeight(true),
+        mainHeightMarginPaddingBorder = $('.b-content').outerHeight(true) - $('.b-content').height() + 3;
+        $('.b-content').css({
+            'min-height': browserHeight - footerOuterHeight - mainHeightMarginPaddingBorder,
+        });
+    };
+
+    if( isMobile){
+        $(".b-block table").wrap('<div class="b-table-wrap b-slideout-not-touch clearfix"></div>');
+        
+        $("body").on("touchstart", ".b-slideout-not-touch", function(){
+            $("html").addClass("touch-locked");
+        });
+
+        $("body").on("touchend", function(){
+            $("html").removeClass("touch-locked");
+        });
+
+        footerToBottom();
+
+        $(window).resize(function () {
+            footerToBottom();
+        });
+    }
+
+    $(function() {
+        FastClick.attach(document.body);
+    });
+
 	var myPlace = new google.maps.LatLng(56.520189, 85.104639);
     var myOptions = {
         zoom: 15,
@@ -210,7 +241,8 @@ $(document).ready(function(){
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         disableDefaultUI: true,
         scrollwheel: false,
-        zoomControl: true
+        zoomControl: true,
+        gestureHandling: "greedy"
     }
     var map = new google.maps.Map(document.getElementById("b-map"), myOptions); 
 

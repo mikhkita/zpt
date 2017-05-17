@@ -7,6 +7,7 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 
 	<link rel="stylesheet" href="css/reset.css" type="text/css">
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
@@ -18,18 +19,18 @@
 
 	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 768px)" href="css/layout-mobile.css">
 	<link rel="stylesheet" media="screen and (max-width: 1024px)" href="css/layout-tablet.css">
-	<link rel="icon" type="image/vnd.microsoft.icon" href="/i/favicon.ico">
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/i/apple-touch-icon-57x57.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/i/apple-touch-icon-114x114.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/i/apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/i/apple-touch-icon-144x144.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/i/apple-touch-icon-120x120.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/i/apple-touch-icon-152x152.png" />
-	<link rel="icon" type="image/png" href="/i/favicon-32x32.png" sizes="32x32" />
-	<link rel="icon" type="image/png" href="/i/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16" />
 	<meta name="application-name" content="Томский Приборный Завод"/>
 	<meta name="msapplication-TileColor" content="#FFFFFF" />
-	<meta name="msapplication-TileImage" content="/i/mstile-144x144.png" />
+	<meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
 
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
@@ -48,6 +49,7 @@
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/slideout.min.js"></script>
+	<script type="text/javascript" src="js/fastclick.js"></script>
 
 	<meta property="og:url" content="">
     <meta property="og:title" content="ЗАО «Томский Приборный Завод»">
@@ -56,10 +58,6 @@
     <meta property="twitter:image" content="/i/logo-cosmodent.png">
     <link rel="image_src" href="/i/logo-cosmodent.png">
 
-	<script>
-    	if( !device.mobile() )
-    		$("meta[name='viewport']").attr("content", "width=device-width, user-scalable=no");
-    </script>
 
 </head>
 <body>
@@ -77,110 +75,112 @@
 		</ul>
 	</div>
 	<div class="b-page" id="panelSlideout">
-		<div class="b b-text itsMenu hideMenu">
-			<div class="burger-menu">
-	  			<div class="burger"></div>  
-	  			<h3>Меню<h3>
-			</div>	
-		</div>
-		<div class="b b-main-slider">
-			<div class="b-main-slide" style="background-image: url('i/slider.jpg');"></div>
-			<div class="b-main-slide" style="background-image: url('i/slider.jpg');"></div>
-			<div class="b-main-slide" style="background-image: url('i/slider.jpg');"></div>
-		</div>
-		<div class="b b-text">
-			<div class="b-block b-padding">
-				<h1>ЗАО «Томский Приборный Завод»</h1>
-				<p>В настоящее время ЗАО «Томский приборный завод» занимается изготовлением и поставкой продукции как в интересах Министерства обороны РФ, так и гражданского назначения, восстановлением работоспособности приборов системы управления ракетных комплексов морского и наземного базирования; изготовлением виброизоляторов ДКА, ДКУ, используемых для защиты оборудования и приборов от воздействия вибрации и ударных нагрузок в изделиях авиационной и ракетно-космической техники.</p>
-				<a href="#" class="b-btn b-blue-btn">История компании</a>
+		<div class="b-content">
+			<div class="b b-text itsMenu hideMenu">
+				<div class="burger-menu">
+		  			<div class="burger"></div>  
+		  			<h2>Меню</h2>
+				</div>	
 			</div>
-		</div>
-		<div class="b b-product-slider b-product-slick b-dark-dots">
-			<div class="b-product-slide" style="background-image: url('i/vibr.jpg');">
+			<div class="b b-main-slider">
+				<div class="b-main-slide" style="background-image: url('i/slider.jpg');"></div>
+				<div class="b-main-slide" style="background-image: url('i/slider.jpg');"></div>
+				<div class="b-main-slide" style="background-image: url('i/slider.jpg');"></div>
+			</div>
+			<div class="b b-text">
 				<div class="b-block b-padding">
-					<div class="b-product-slide-cont">
-						<div class="b-product-slide-text">
-							<h3>Виброизоляторы</h3>
-							<p>пространственного нагружения</p>
-							<a href="product.html" class="b-btn">Подробнее</a>
+					<h1>ЗАО «Томский Приборный Завод»</h1>
+					<p>В настоящее время ЗАО «Томский приборный завод» занимается изготовлением и поставкой продукции как в интересах Министерства обороны РФ, так и гражданского назначения, восстановлением работоспособности приборов системы управления ракетных комплексов морского и наземного базирования; изготовлением виброизоляторов ДКА, ДКУ, используемых для защиты оборудования и приборов от воздействия вибрации и ударных нагрузок в изделиях авиационной и ракетно-космической техники.</p>
+					<a href="#" class="b-btn b-blue-btn">История компании</a>
+				</div>
+			</div>
+			<div class="b b-product-slider b-product-slick b-dark-dots">
+				<div class="b-product-slide" style="background-image: url('i/vibr.jpg');">
+					<div class="b-block b-padding">
+						<div class="b-product-slide-cont">
+							<div class="b-product-slide-text">
+								<h3>Виброизоляторы</h3>
+								<p>пространственного нагружения</p>
+								<a href="product.html" class="b-btn">Подробнее</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="b-product-slide" style="background-image: url('i/vibr.jpg');">
+					<div class="b-block b-padding">
+						<div class="b-product-slide-cont">
+							<div class="b-product-slide-text">
+								<h3>Виброизоляторы</h3>
+								<p>пространственного нагружения</p>
+								<a href="product.html" class="b-btn">Подробнее</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="b-product-slide" style="background-image: url('i/vibr.jpg');">
+					<div class="b-block b-padding">
+						<div class="b-product-slide-cont">
+							<div class="b-product-slide-text">
+								<h3>Виброизоляторы</h3>
+								<p>пространственного нагружения</p>
+								<a href="product.html" class="b-btn">Подробнее</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="b-product-slide" style="background-image: url('i/vibr.jpg');">
-				<div class="b-block b-padding">
-					<div class="b-product-slide-cont">
-						<div class="b-product-slide-text">
-							<h3>Виброизоляторы</h3>
-							<p>пространственного нагружения</p>
-							<a href="product.html" class="b-btn">Подробнее</a>
+			<div class="b b-partners b-padding">
+				<div class="b-block">
+					<h2 class="b-title">Наши партнеры</h2>
+					<div class="b-partners-slider">
+						<div class="b-partners-slide">
+							<a href="#" style="background-image: url('i/partner-1.png');"></a>
 						</div>
-					</div>
-				</div>
-			</div>
-			<div class="b-product-slide" style="background-image: url('i/vibr.jpg');">
-				<div class="b-block b-padding">
-					<div class="b-product-slide-cont">
-						<div class="b-product-slide-text">
-							<h3>Виброизоляторы</h3>
-							<p>пространственного нагружения</p>
-							<a href="product.html" class="b-btn">Подробнее</a>
+						<div class="b-partners-slide">
+							<a href="#" style="background-image: url('i/partner-2.png');"></a>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="b b-partners b-padding">
-			<div class="b-block">
-				<h2 class="b-title">Наши партнеры</h2>
-				<div class="b-partners-slider">
-					<div class="b-partners-slide">
-						<a href="#" style="background-image: url('i/partner-1.png');"></a>
-					</div>
-					<div class="b-partners-slide">
-						<a href="#" style="background-image: url('i/partner-2.png');"></a>
-					</div>
-					<div class="b-partners-slide">
-						<a href="#" style="background-image: url('i/partner-3.png');"></a>
-					</div>
-					<div class="b-partners-slide">
-						<a href="#" style="background-image: url('i/partner-4.png');"></a>
-					</div>
-					<div class="b-partners-slide">
-						<a href="#" style="background-image: url('i/partner-5.png');"></a>
-					</div>
-					<div class="b-partners-slide">
-						<a href="#" style="background-image: url('i/partner-6.png');"></a>
-					</div>
-					<div class="b-partners-slide">
-						<a href="#" style="background-image: url('i/partner-7.png');"></a>
-					</div>
-					<div class="b-partners-slide">
-						<a href="#" style="background-image: url('i/partner-8.png');"></a>
-					</div>
-					<div class="b-partners-slide">
-						<a href="#" style="background-image: url('i/partner-1.png');"></a>
-					</div>
-					<div class="b-partners-slide">
-						<a href="#" style="background-image: url('i/partner-2.png');"></a>
-					</div>
-					<div class="b-partners-slide">
-						<a href="#" style="background-image: url('i/partner-3.png');"></a>
-					</div>
-					<div class="b-partners-slide">
-						<a href="#" style="background-image: url('i/partner-4.png');"></a>
-					</div>
-					<div class="b-partners-slide">
-						<a href="#" style="background-image: url('i/partner-5.png');"></a>
-					</div>
-					<div class="b-partners-slide">
-						<a href="#" style="background-image: url('i/partner-6.png');"></a>
-					</div>
-					<div class="b-partners-slide">
-						<a href="#" style="background-image: url('i/partner-7.png');"></a>
-					</div>
-					<div class="b-partners-slide">
-						<a href="#" style="background-image: url('i/partner-8.png');"></a>
+						<div class="b-partners-slide">
+							<a href="#" style="background-image: url('i/partner-3.png');"></a>
+						</div>
+						<div class="b-partners-slide">
+							<a href="#" style="background-image: url('i/partner-4.png');"></a>
+						</div>
+						<div class="b-partners-slide">
+							<a href="#" style="background-image: url('i/partner-5.png');"></a>
+						</div>
+						<div class="b-partners-slide">
+							<a href="#" style="background-image: url('i/partner-6.png');"></a>
+						</div>
+						<div class="b-partners-slide">
+							<a href="#" style="background-image: url('i/partner-7.png');"></a>
+						</div>
+						<div class="b-partners-slide">
+							<a href="#" style="background-image: url('i/partner-8.png');"></a>
+						</div>
+						<div class="b-partners-slide">
+							<a href="#" style="background-image: url('i/partner-1.png');"></a>
+						</div>
+						<div class="b-partners-slide">
+							<a href="#" style="background-image: url('i/partner-2.png');"></a>
+						</div>
+						<div class="b-partners-slide">
+							<a href="#" style="background-image: url('i/partner-3.png');"></a>
+						</div>
+						<div class="b-partners-slide">
+							<a href="#" style="background-image: url('i/partner-4.png');"></a>
+						</div>
+						<div class="b-partners-slide">
+							<a href="#" style="background-image: url('i/partner-5.png');"></a>
+						</div>
+						<div class="b-partners-slide">
+							<a href="#" style="background-image: url('i/partner-6.png');"></a>
+						</div>
+						<div class="b-partners-slide">
+							<a href="#" style="background-image: url('i/partner-7.png');"></a>
+						</div>
+						<div class="b-partners-slide">
+							<a href="#" style="background-image: url('i/partner-8.png');"></a>
+						</div>
 					</div>
 				</div>
 			</div>
