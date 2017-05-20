@@ -6,10 +6,10 @@ body {
 
 .itsMenu{
 	background-color: #383838;
-	padding: 20px 25px;
+	padding: 15px 20px;
   box-sizing: border-box;
 }
-	.itsMenu h2{
+	.itsMenu h3{
 		color: #FFF;
 		margin: 0;
 	}
@@ -71,40 +71,40 @@ body {
 /* the tasty burger */
 .burger-menu {
   position: relative;
-  width: 45px;
-  height: 45px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
 }
-.burger-menu h2{
+.burger-menu h3{
 	position: absolute;
-	left: 65px;
-	bottom: 2px;
+	left: 52px;
+	top: -5px;
 }
 .burger {
   position: absolute;
   background: #FFF;
   width: 100%;
-  height: 7px;
+  height: 4px;
   top: 50%;
   right: 0px;
-  margin-top: -5px;
+  margin-top: -2px;
   opacity: 1;
 }
 .burger::before {
   position: absolute;
   background: #FFF;
-  width: 45px;
-  height: 7px;
-  top: 16px;
+  width: 32px;
+  height: 4px;
+  top: 11px;
   content: "";
   display: block;
 }
 .burger::after {
   position: absolute;
   background: #FFF;
-  width: 45px;
-  height: 7px;
-  bottom: 16px;
+  width: 32px;
+  height: 4px;
+  bottom: 11px;
   content: "";
   display: block;
 }

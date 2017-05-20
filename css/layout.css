@@ -887,6 +887,17 @@ h1{
 	display: none;
 }
 
+.b-inner-slide-static{
+    height: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.b-inner-slide-Hide{
+	display: none;
+}
+    
+
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	.b-redder{
 		background-image: url('../i/logo-redder@2x.png');
